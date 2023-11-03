@@ -7,21 +7,16 @@
     <link rel="icon" type="image/x-icon" href="./assets/logo.png">
   </head>
   <body>
-    <main>
-      <div class="overview">
-        <div class="pb-5">
-          <h1>Sign In</h1>
-        </div>
-        <div class="form">
-          <label>Email</label>
-          <input type="text" name="email" class="email" />
-        </div>
-        <div class="form">
-          <label>Password</label>
-          <input type="password" name="password" class="password" />
-        </div>
-        <button class="py-3 px-16 bg-red-500 rounded-md text-white drop-shadow-3xl">Get Started</button>
+    <div class="login-page">
+      <div class="form">
+        <h1>Sign In</h1>
+        <form class="login-form">
+          <input type="text" placeholder="Username" required/>
+          <input type="password" placeholder="Password" required/>
+          <button>Sign In</button>
+          <p class="message">Not registered? <a href="#">Create an account</a></p>
+        </form>
       </div>
-    </main>
+    </div>
   </body>
 </html>
