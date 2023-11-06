@@ -17,6 +17,16 @@ header{
   margin-right: auto;
   overflow: hidden;
 }
+
+@media only screen and (max-width: 768px) {
+  header{
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    max-width: -webkit-fill-available;
+  }
+}
+
 header img{
   height: 2.5rem;
   display: block;
@@ -35,6 +45,17 @@ header ul{
 header ul li{
   list-style: none;
   padding-inline-start: 40px;
+}
+@media only screen and (max-width: 768px) {
+  header img{
+    margin-bottom: 2rem;
+  }
+  header ul{
+    padding-inline-start: 0px;
+  }
+  header .menu{
+    margin-bottom: 1rem;
+  }
 }
 header .button-signin{
   font-weight: 700;
@@ -79,16 +100,34 @@ header .button-signup{
   line-height: inherit;
   max-width: 72rem;
   padding-top: 6rem;
-  padding-bottom: 5rem;
+  padding-bottom: 3rem;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
+
+@media only screen and (max-width: 768px) {
+  .overview{
+    padding-top: 0rem;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  .overview .content{
+    padding: 2rem;
+  }
+}
+
 .overview-text{
-  padding-bottom: 3rem;
+  padding-bottom: 1rem;
 }
 .overview img{
   line-height: inherit;
   max-width: 36rem;
+  object-fit: contain;
+}
+@media only screen and (max-width: 768px) {
+  .overview img{
+    line-height: inherit;
+    max-width: 20rem;
+  }
 }
 .overview button{
   font-family: inherit;
@@ -128,6 +167,8 @@ header .button-signup{
   max-width: 72rem;
   align-items: center;
   display: flex;
+  flex-flow: wrap;
+  flex-direction: row;
   margin-left: auto;
   margin-right: auto;
   overflow: hidden;
@@ -140,7 +181,8 @@ header .button-signup{
   border: 1px solid;
   border-color: rgb(239 68 68 / var(--tw-border-opacity));
   border-radius: 0.5rem;
-  width: 23rem;
+  width: 22rem;
+  margin: 1rem;
 }
 .testimoni .isi .card .card-header{
   display: flex;
@@ -239,6 +281,10 @@ footer .contain{
   margin-right: auto;
   width: 100%;
 }
+footer .contain .menu{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
 footer .contain img{
   width: 8rem;
 }
@@ -275,6 +321,20 @@ footer .flex-1 ul li{
   margin-bottom: 0.5rem;
 }
 
+@media only screen and (max-width: 768px) {
+  footer .contain{
+    flex-direction: column-reverse;
+  }
+  footer .contain .text{
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+  }
+  footer .contain .menu{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 /* pricing */
 .pricing{
   padding-top: 2rem;
@@ -302,6 +362,8 @@ footer .flex-1 ul li{
   margin-right: auto;
   margin-bottom: 1rem;
   border-collapse: collapse;
+  display: flow;
+  overflow: auto;
 }
 .pricing .isi table thead tr td{
   padding-right: 1rem;
